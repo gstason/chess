@@ -58,9 +58,10 @@ class Board {
     }
 
     public function dump() {
+        $xAxis = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
         for ($y = 8; $y >= 1; $y--) {
             echo "$y ";
-            for ($x = 'a'; $x <= 'h'; $x++) {
+            foreach ($xAxis as $x) {
                 if (isset($this->figures[$x][$y])) {
                     echo $this->figures[$x][$y];
                 } else {
